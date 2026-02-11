@@ -1,0 +1,6 @@
+[
+    { "destino": "Brasil", "precio": 120000 },
+    { "destino": "Europa", "precio": 350000 },
+    { "destino": "Bariloche", "precio": 90000 },
+    { "destino": "Caribe", "precio": 280000 }
+  ]
