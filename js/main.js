@@ -18,24 +18,23 @@ function mostrarHistorial() {
         historialLista.appendChild(li);
     });
 }
+
 boton.addEventListener("click", () => {
     const dias = Number(diasInput.value);
     const personas = Number(personasInput.value);
 
-    
     if (
-        !Number.isInteger(dias) || 
+        !Number.isInteger(dias) ||
         !Number.isInteger(personas) ||
-        dias <= 0 || 
+        dias <= 0 ||
         personas <= 0
     ) {
         resultado.textContent = "Ingresá solo números enteros positivos";
         return;
     }
 
-    const costos = [dias * precioPorDia, personas * precioPorDia];
-
-    const total = costos.reduce((acumulador, valor) => acumulador + valor, 0);
+    // ✅ CÁLCULO CORRECTO
+    const total = dias * personas * precioPorDia;
 
     const nuevoViaje = {
         dias,
